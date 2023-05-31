@@ -1,3 +1,4 @@
+import 'package:bookappui/presentation/widget/category_card.dart';
 import 'package:flutter/material.dart';
 import 'package:bookappui/presentation/constant.dart';
 
@@ -9,7 +10,13 @@ class MyHomePage extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(12),
+              bottomRight: Radius.circular(12)),
+        ),
         toolbarHeight: 64,
+        centerTitle: true,
         backgroundColor: primaryColor,
         title: const Text(
           "Bac App",
@@ -26,40 +33,27 @@ class MyHomePage extends StatelessWidget {
               ))
         ],
       ),
-      body: Column(
-        children: [
-          Card(
-            color: backgroundColor,
-            child: SizedBox(
-              height: 200,
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: AssetImage(
-                        'assets/icones/2.png',
-                      ),
-                      radius: 80,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Text(
-                      'Math',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: colorWriting,
-                        fontWeight: FontWeight.w500,
-                      ), //Textstyle
-                    ), //Text
-
-                    //Image.asset('assets/icones/2.png')
-                  ],
-                ),
-              ),
-            ),
+      body: ListView(
+        children: const [
+          CategoryCard(
+            title: 'MATH',
+            imagePath: 'assets/icones/1.png',
+          ),
+          CategoryCard(
+            title: 'Physics',
+            imagePath: 'assets/icones/4.png',
+          ),
+          CategoryCard(
+            title: 'SVT',
+            imagePath: 'assets/icones/2.png',
+          ),
+          CategoryCard(
+            title: 'Others',
+            imagePath: 'assets/icones/3.png',
+          ),
+          CategoryCard(
+            title: 'Others',
+            imagePath: 'assets/icones/3.png',
           ),
         ],
       ),
