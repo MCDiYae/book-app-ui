@@ -1,4 +1,5 @@
 import 'package:bookappui/presentation/widget/category_card.dart';
+import 'package:bookappui/presentation/widget/myappbar.dart';
 import 'package:flutter/material.dart';
 import 'package:bookappui/presentation/constant.dart';
 
@@ -9,29 +10,9 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-      appBar: AppBar(
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomLeft: Radius.circular(12),
-              bottomRight: Radius.circular(12)),
-        ),
-        toolbarHeight: 64,
-        centerTitle: true,
-        backgroundColor: primaryColor,
-        title: const Text(
-          "Bac App",
-          style: TextStyle(color: colorWriting, fontSize: 32),
-        ),
-        actions: [
-          IconButton(
-              padding: const EdgeInsets.only(right: 16),
-              onPressed: () {},
-              icon: const Icon(
-                iconHomeBar,
-                color: colorWriting,
-                size: 32,
-              ))
-        ],
+      appBar: const MyAppBar(
+        title: nameApp,
+        icon: iconHomeBar,
       ),
       body: ListView(
         children: const [
