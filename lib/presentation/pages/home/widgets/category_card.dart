@@ -1,5 +1,7 @@
+import 'package:bookappui/core/utils/app_route.dart';
 import 'package:bookappui/presentation/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class CategoryCard extends StatelessWidget {
   final String title;
@@ -16,9 +18,9 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: InkWell(
+      child: GestureDetector(
         onTap: () {
-          onModuleSelected!(title);
+          GoRouter.of(context).push(AppRoute.kModule);
         },
         child: Card(
           color: backgroundColor,
