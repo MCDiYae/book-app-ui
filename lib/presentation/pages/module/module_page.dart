@@ -10,7 +10,7 @@ class ModulePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        appBar: MyAppBar(title: 'Module Name'),
+        appBar: MyAppBar(title: "module NAME"),
         body: ListBookPage(),
       ),
     );
