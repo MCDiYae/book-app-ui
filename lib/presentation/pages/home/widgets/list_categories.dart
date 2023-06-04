@@ -1,3 +1,4 @@
+import 'package:bookappui/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 import 'category_card.dart';
@@ -13,19 +14,19 @@ class ListCategories extends StatelessWidget {
       children: const [
         CategoryCard(
           title: 'MATH',
-          imagePath: 'assets/icones/1.png',
+          imagePath: AssetsData.mathIcone,
         ),
         CategoryCard(
           title: 'Physics',
-          imagePath: 'assets/icones/4.png',
+          imagePath: AssetsData.phyIcone,
         ),
         CategoryCard(
           title: 'SVT',
-          imagePath: 'assets/icones/2.png',
+          imagePath: AssetsData.svtIcone,
         ),
         CategoryCard(
           title: 'Others',
-          imagePath: 'assets/icones/3.png',
+          imagePath: AssetsData.ohersIcone,
         ),
       ],
     );
