@@ -1,6 +1,8 @@
 import 'package:bookappui/core/utils/assets.dart';
 import 'package:bookappui/core/utils/styles.dart';
 import 'package:bookappui/presentation/constant.dart';
+import 'package:bookappui/presentation/pages/Book/widgets/button_install.dart';
+import 'package:bookappui/presentation/pages/Book/widgets/button_read.dart';
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
@@ -34,14 +36,9 @@ class BookCard extends StatelessWidget {
           const SizedBox(
             height: 32,
           ),
-          Row(
-            children: [
-              IconButton(
-                color: primaryColor1,
-                onPressed: () {},
-                icon: const Icon(Icons.install_desktop),
-              )
-            ],
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [ButtonRead(), ButtonInstall()],
           ),
         ],
       ),
