@@ -1,8 +1,7 @@
 import 'package:bookappui/core/utils/assets.dart';
 import 'package:bookappui/core/utils/styles.dart';
 import 'package:bookappui/presentation/constant.dart';
-import 'package:bookappui/presentation/pages/Book/widgets/button_install.dart';
-import 'package:bookappui/presentation/pages/Book/widgets/button_read.dart';
+import 'package:bookappui/presentation/pages/Book/widgets/button_floating.dart';
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
@@ -22,15 +21,15 @@ class BookCard extends StatelessWidget {
             style: Styles.sTyle2,
           ),
           const SizedBox(
-            height: 32,
+            height: 24,
           ),
           Image.asset(AssetsData.bookCover2),
           const SizedBox(
-            height: 32,
+            height: 24,
           ),
           const Text(
-            textAlign: TextAlign.center,
-            'description of books \n Un livre est un document écrit formant unité et conçu comme tel, composé de pages reliées les unes aux autres. Il a pour fonction dcriture, permettant la diffusion et la conservation de textes de nature variée',
+            textAlign: TextAlign.start,
+            textExemple,
             style: Styles.styleWriting,
           ),
           const SizedBox(
@@ -38,7 +37,18 @@ class BookCard extends StatelessWidget {
           ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [ButtonRead(), ButtonInstall()],
+            children: [
+              ButtonFloating(
+                title: 'Read Now',
+                color: primaryColor1,
+                icon: readIcon,
+              ),
+              ButtonFloating(
+                title: 'Install',
+                color: greenColor,
+                icon: installIcon,
+              ),
+            ],
           ),
         ],
       ),
