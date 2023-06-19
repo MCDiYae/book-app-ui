@@ -5,7 +5,9 @@ import 'package:bookappui/presentation/pages/Book/widgets/button_floating.dart';
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
-  const BookCard({super.key});
+  const BookCard({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +41,13 @@ class BookCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ButtonFloating(
+                tagHero: 'btn1',
                 title: 'Read Now',
                 color: primaryColor1,
                 icon: readIcon,
               ),
               ButtonFloating(
+                tagHero: 'btn2',
                 title: 'Install',
                 color: greenColor,
                 icon: installIcon,
